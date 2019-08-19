@@ -1,0 +1,30 @@
+<ActionBar class="action-bar">
+    <!--
+    Use the NavigationButton as a side-drawer button in Android
+    because ActionItems are shown on the right side of the ActionBar
+    -->
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <!--
+    Use the ActionItem for IOS with position set to left. Using the
+    NavigationButton as a side-drawer button in iOS is not possible,
+    because its function is to always navigate back in the application.
+    -->
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Browse"></Label>
+</ActionBar>
+
+<StackLayout>
+    <!-- https://player.vimeo.com/video/353694514?badge=0&autopause=0&player_id=0&app_id=154080 -->
+    <!-- https://vimeo.com/353694514 -->
+    <!-- <VideoPlayer id="nativeVideoPlayer" controls="true" autoplay="true" height="280"
+            src="https://player.vimeo.com/video/353694514?app_id=122963">
+        </VideoPlayer> -->
+    <!-- <Button class="btn btn-primary" text="Play" (tap)="play()"></Button>
+        <Button class="btn btn-primary" text="Pause" (tap)="pause()"></Button>
+        <Label [text]="item.desc"></Label> -->
+
+    <!-- Remote file to test with https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4 -->
+    <WebView [src]="htmlIFrame"></WebView>
+</StackLayout>
