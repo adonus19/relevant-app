@@ -34,7 +34,7 @@ export class VimeoService {
         //         console.log('Error received: ', err);
         //     }
         // )
-        const token = '9ce9ab52dd575cfd97167a0f95885b9c'
+        const token = VimeoConfig.token;
         const headers = new HttpHeaders({
             Authorization: `bearer ${token}`
         });
